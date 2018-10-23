@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Change map edge limit</name>
+	<author>Kapitan Oczywisty</author>
+	<targetVersion>1.0.2059</targetVersion>
+	<description>
+    Simple mod that allows you to customize "too close to map edge" limits when placing buildings, blueprints or zones. Should works with any other mod (unless is doing the same thing).
+    
+    &lt;color=orange&gt;&lt;b&gt;Dependencies &lt;/b&gt;&lt;/color&gt;
+    This mod depends on &lt;b&gt;Hugslib&lt;/b&gt;. Load Hugslib before this mod.
+  </description>
+</ModMetaData>
