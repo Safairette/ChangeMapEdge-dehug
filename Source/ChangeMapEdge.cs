@@ -25,8 +25,8 @@ namespace ChangeMapEdge
         private SettingHandle<int> noZoneLimit;
         public override void DefsLoaded()
         {
-            noBuildLimit = Settings.GetHandle<int>("noBuildEdge", "No-build edge size", "Restrict building to X tiles from edge. Game default: 10", 10, Validators.IntRangeValidator(0, 20));
-            noZoneLimit = Settings.GetHandle<int>("noZoneEdge", "No-zone edge size", "Restrict zones to X tiles from edge. Game default: 5", 5, Validators.IntRangeValidator(0, 10));
+            noBuildLimit = Settings.GetHandle<int>("noBuildEdge", "No-build edge size", "Restrict building to X tiles from edge. Game default: 10", 0, Validators.IntRangeValidator(0, 20));
+            noZoneLimit = Settings.GetHandle<int>("noZoneEdge", "No-zone edge size", "Restrict zones to X tiles from edge. Game default: 5", 0, Validators.IntRangeValidator(0, 20));
         }
 
         public int GetNoBuildLimit() => noBuildLimit.Value;
