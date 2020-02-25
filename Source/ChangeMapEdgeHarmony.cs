@@ -1,6 +1,6 @@
 ﻿using System;
 using Verse;
-using Harmony;
+using HarmonyLib;
 using System.Reflection;
 using RimWorld;
 using UnityEngine;
@@ -12,7 +12,7 @@ namespace ChangeMapEdge
     {
         static ChangeMapEdgeHarmony()
         {
-            HarmonyInstance harmony = HarmonyInstance.Create("rimworld.kapitanoczywisty.changemapedge");
+            Harmony harmony = new Harmony("rimworld.kapitanoczywisty.changemapedge");
 
             MethodInfo nobuild_targetmethod = AccessTools.Method(typeof(Verse.GenDraw), "DrawNoBuildEdgeLines");
             HarmonyMethod nobuild_prefixmethod = new HarmonyMethod(typeof(ChangeMapEdgeHarmony).GetMethod("DrawNoBuildEdgeLines_Prefix"));

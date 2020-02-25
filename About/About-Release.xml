@@ -2,7 +2,11 @@
 <ModMetaData>
 	<name>Change map edge limit</name>
 	<author>Kapitan Oczywisty</author>
-	<targetVersion>1.0.2059</targetVersion>
+    <supportedVersions>
+        <li>1.0</li>
+        <li>1.1</li>
+    </supportedVersions>
+    <packageId>kapitanoczywisty.changemapedge</packageId>
 	<description>
     Simple mod that allows you to customize "too close to map edge" limits when placing buildings, blueprints or zones. Should works with any other mod (unless is doing the same thing).
     
