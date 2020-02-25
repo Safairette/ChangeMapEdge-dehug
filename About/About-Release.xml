@@ -7,6 +7,16 @@
         <li>1.1</li>
     </supportedVersions>
     <packageId>kapitanoczywisty.changemapedge</packageId>
+    <modDependencies>
+        <li>
+            <packageId>UnlimitedHugs.HugsLib</packageId>
+            <displayName>HugsLib</displayName>
+            <steamWorkshopUrl>steam://url/CommunityFilePage/818773962</steamWorkshopUrl>
+        </li>
+    </modDependencies>
+    <loadAfter>
+        <li>UnlimitedHugs.HugsLib</li>
+    </loadAfter>
 	<description>
     Simple mod that allows you to customize "too close to map edge" limits when placing buildings, blueprints or zones. Should works with any other mod (unless is doing the same thing).
     

@@ -7,5 +7,15 @@
         <li>1.1</li>
     </supportedVersions>
     <packageId>kapitanoczywisty.changemapedge.dev</packageId>
+    <modDependencies>
+        <li>
+            <packageId>UnlimitedHugs.HugsLib</packageId>
+            <displayName>HugsLib</displayName>
+            <steamWorkshopUrl>steam://url/CommunityFilePage/818773962</steamWorkshopUrl>
+        </li>
+    </modDependencies>
+    <loadAfter>
+        <li>UnlimitedHugs.HugsLib</li>
+    </loadAfter>
 	<description>Change map edge limit dev build</description>
 </ModMetaData>
