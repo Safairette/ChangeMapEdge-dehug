@@ -43,10 +43,10 @@ namespace ChangeMapEdge
             Vector3 vector2 = new Vector3((float)edgeDist, y, (float)(size.z - edgeDist));
             Vector3 vector3 = new Vector3((float)(size.x - edgeDist), y, (float)(size.z - edgeDist));
             Vector3 vector4 = new Vector3((float)(size.x - edgeDist), y, (float)edgeDist);
-            GenDraw.DrawLineBetween(vector, vector2, ChangeMapEdgeHarmony.LineMatMetaOverlay);
-            GenDraw.DrawLineBetween(vector2, vector3, ChangeMapEdgeHarmony.LineMatMetaOverlay);
-            GenDraw.DrawLineBetween(vector3, vector4, ChangeMapEdgeHarmony.LineMatMetaOverlay);
-            GenDraw.DrawLineBetween(vector4, vector, ChangeMapEdgeHarmony.LineMatMetaOverlay);
+            GenDraw.DrawLineBetween(vector, vector2, ChangeMapEdgeHarmony.LineMatMetaOverlay, 0.2f);
+            GenDraw.DrawLineBetween(vector2, vector3, ChangeMapEdgeHarmony.LineMatMetaOverlay, 0.2f);
+            GenDraw.DrawLineBetween(vector3, vector4, ChangeMapEdgeHarmony.LineMatMetaOverlay, 0.2f);
+            GenDraw.DrawLineBetween(vector4, vector, ChangeMapEdgeHarmony.LineMatMetaOverlay, 0.2f);
         }
 
         public static bool IgnoreFunction()
