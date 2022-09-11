@@ -31,6 +31,10 @@ namespace ChangeMapEdge
             MethodInfo innozone_targetmethod = AccessTools.Method(typeof(Verse.GenGrid), "InNoZoneEdgeArea");
             HarmonyMethod innozone_postfixmethod = new HarmonyMethod(typeof(ChangeMapEdgeHarmony).GetMethod("InNoZoneEdgeArea_Postfix"));
             harmony.Patch(innozone_targetmethod, ignorefunction_prefixmethod, innozone_postfixmethod);
+
+            MethodInfo cellrect_innobuild_targetmethod = AccessTools.Method(typeof(Verse.CellRect), "InNoBuildEdgeArea");
+            HarmonyMethod cellrect_innobuild_postfixmethod = new HarmonyMethod(typeof(ChangeMapEdgeHarmony).GetMethod("CellRectInNoBuildEdgeArea_Postfix"));
+            harmony.Patch(cellrect_innobuild_targetmethod, ignorefunction_prefixmethod, cellrect_innobuild_postfixmethod);
         }
 
         static Material LineMatMetaOverlay = MaterialPool.MatFrom(GenDraw.LineTexPath, ShaderDatabase.MetaOverlay);
@@ -75,6 +79,11 @@ namespace ChangeMapEdge
         public static void InNoZoneEdgeArea_Postfix(this IntVec3 c, Map map, ref bool __result)
         {
             __result = c.CloseToEdge(map, ChangeMapEdge.Instance.GetNoZoneLimit());
+        }
+        public static void CellRectInNoBuildEdgeArea_Postfix(Verse.CellRect __instance, Map map, ref bool __result)
+        {
+            int limit = ChangeMapEdge.Instance.GetNoBuildLimit();
+            __result = !__instance.IsEmpty && (__instance.minX < limit || __instance.minZ < limit || __instance.maxX >= map.Size.x - limit || __instance.maxZ >= map.Size.z - limit);
         }
     }
 }
