@@ -4,6 +4,7 @@
 	<author>Safairette</author>
     <supportedVersions>
         <li>1.4</li>
+        <li>1.5</li>
     </supportedVersions>
     <packageId>safair.changemapedge</packageId>
     <modDependencies>
